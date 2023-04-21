@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function checkform()
+            {
+                var mytowel;
+                var mycup;
+                var myplate;
+
+                if (document.getElementById("t1").checked)
+                {
+                    mytowel = "one towel";
+                }
+                if (document.getElementById("t2").checked)
+                {
+                    mytowel = "two towels";
+                }
+                if (document.getElementById("t3").checked)
+                {
+                    mytowel = "three towels";
+                }
+
+                if (document.getElementById("c1").checked)
+                {
+                    mycup = "one cup";
+                }
+                if (document.getElementById("c2").checked)
+                {
+                    mycup = "two cups";
+                }
+                if (document.getElementById("c3").checked)
+                {
+                    mycup = "three cups";
+                }
+
+                if (document.getElementById("p1").checked)
+                {
+                    myplate = "one plate";
+                }
+                if (document.getElementById("p2").checked)
+                {
+                    myplate = "two plates";
+                }
+                if (document.getElementById("p3").checked)
+                {
+                    myplate = "three plates";
+                }
+
+                document.getElementById("info1").innerHTML = mytowel;
+                document.getElementById("info2").innerHTML = mycup;
+                document.getElementById("info3").innerHTML = myplate;
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>your purchase items</h1>
+            <img src="towel.jpg" width="150">
+            <img src="cup.jpg" width="150">
+            <img src="plate.jpg" width="150">
+            <form method="post" onsubmit="return checkform()">
+                <table border="1" width="500">
+                    <tr><td>quantity/items</td><td>type of items</td></tr>
+                    <tr><td>towel</td><td>
+                        <input id="t1" type="radio"  name="towel" value="One">One
+                        <input id="t2" type="radio"  name="towel" value="Two">Two
+                        <input id="t3" type="radio"  name="towel" value="Three">Three
+                    </td></tr>
+                    <tr><td>cup</td><td>
+                        <input id="c1" type="radio" name="cup" value="One">One
+                        <input id="c2" type="radio" name="cup" value="Two">Two
+                        <input id="c3" type="radio" name="cup" value="Three">Three
+                    </td></tr>
+                    <tr><td>plates</td><td>
+                        <input id="p1"  type="radio" name="plate" value="One">One
+                        <input id="p2"  type="radio" name="plate" value="Two">Two
+                        <input id="p3"  type="radio" name="plate" value="Three">Three
+                    </td></tr>
+                    <tr><td><input type="submit" value="Next"></td><td>Submit your purchase! Thank you</td></tr>
+            </form>
+            <br><br>
+            <br><br>
+            
+            <table border="1" width="500">
+                <tr><td>List:</td><td>your items purchase</td></tr>
+                <tr><td>items1:</td><td><div id="info1"></div></td></tr>
+                <tr><td>items2:</td><td><div id="info2"></div></td></tr>
+                <tr><td>items3:</td><td><div id="info3"></div></td></tr>
+            </center>
+    </body>
+</html>
